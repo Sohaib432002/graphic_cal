@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphical Calculator | ML</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .navbar-logo img {
+            height: 113px;
+    width: 142px;
+        }
+
+        .navbar-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-links img {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+                width: 142px;
+            border-radius: 5px;
+            background-color: #555;
+            transition: background-color 0.3s;
+        }
+
+        .navbar-links img:hover {
+            background-color: #777;
+        }
+
+        /* Button Styles */
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .btn-container button {
+            margin: 20px;
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-container button a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="{{ url_for('static', filename='images/logo22869383.png') }}" alt="Logo">
+        </div>
+        <div class="navbar-title">
+            Graphical Calculator
+        </div>
+        <div class="navbar-links">
+         <img src="{{ url_for('static', filename='images/360_F_314380473_T9ZSdZfzUYvsnXtZGQdrbjGFo9PD6Q1Q-removebg-preview.png') }}" alt="Logo">
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <button><a href="{{ url_for('linear') }}">Linear Equation</a></button>
+        <button><a href="{{ url_for('quadratic') }}">Quadratic Equation</a></button>
+        <button><a href="{{ url_for('third') }}">Third Degree Equation</a></button>
+        <button><a href="{{ url_for('fourth') }}">Fourth Degree Equation</a></button>
+        <button><a href="{{ url_for('log') }}">Logarithmic</a></button>
+        <button><a href="{{ url_for('exponential') }}">Exponential</a></button>
+        
+    </div>
+</body>
+</html>
